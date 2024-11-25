@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="header-navbar">
+            <div class="menu-icon">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search for products...">
+            </div>
+            <div class="menu-icons">
+                <i class="fa-solid fa-user"></i>
+                <div class="cart-icon">
+                    <i class="fa-solid fa-shopping-cart"></i>
+                    <span>0</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+<!-- cover section -->
+    <section class="cover">
+        <div class="cover-overlay">
+            <h1>Welcome to our Shop</h1>
+            <span class="slogan">Get that beautiful gift for her</span>
+        </div>
+        </div>
+    </section>
+
+    <main>
+        <h2 class="section-heading">New Items</h2>
+        <div class="product-list">
+            <div class="product-item">
+                <img src="./images/BAG.jpg" alt="Bag">
+                <h3>Dressing Bag</h3>
+            </div>
+            <div class="product-item">
+                <img src="./images/Perfume.jpg" alt="Perfume">
+                <h3>Perfume</h3>
+            </div>
+            <div class="product-item">
+                <img src="./images/item4.png" alt="Shopping Bag">
+                <h3>Shopping Bag</h3>
+            </div>
+            <div class="product-item">
+                <img src="./images/item3.png" alt="Bags">
+                <h3>Ladies Bags</h3>
+            </div>
+            <div class="product-item">
+                <img src="./images/Deodorant Stick for women.jpg" alt="Deodorant">
+                <h3>Deodorant Stick</h3>
+            </div>
+        </div>
+   
+
+    <!-- card Items Section -->
+     <h2 class="section-heading">Gift Items</h2>
+     <div class="card-list">
+        <div class="card">
+            <img src="./images/bracelet.jpg" alt="Bracelet">
+            <h4 class="card-title">Bracelet</h4>
+            <p>Lorem ipsum dolor sit amet.</p>
+
+            <div class="card-price">
+                <div class="price">$10.5</div>
+                <i class="fa-solid fa-plus add-to-cart"></i>
+            </div>
+        </div>
+        <div class="card">
+            <img src="./images/smart watch for women.jpg" alt="Smart Watch">
+            <h4 class="card-title">Smart Watch</h4>
+            <p>Lorem ipsum dolor sit amet.</p>
+
+            <div class="card-price">
+                <div class="price">$3.5</div>
+                <i class="fa-solid fa-plus add-to-cart"></i>
+            </div>
+        </div>
+        <div class="card">
+            <img src="./images/spa gift.jpg" alt="Spa">
+            <h4 class="card-title">Spa Set</h4>
+            <p>Lorem ipsum dolor sit amet.</p>
+
+            <div class="card-price">
+                <div class="price">$4.5</div>
+                <i class="fa-solid fa-plus add-to-cart"></i>
+            </div>
+        </div>
+        <div class="card">
+            <img src="./images/perfume2.jpg" alt="Perfume">
+            <h4 class="card-title">Perfume2</h4>
+            <p>Lorem ipsum dolor sit amet.</p>
+
+            <div class="card-price">
+                <div class="price">$5.5</div>
+                <i class="fa-solid fa-plus add-to-cart"></i>
+            </div> 
+        </div>
+        <div class="card">
+            <img src="./images/rose gift.jpg" alt="Spa Gift">
+            <h4 class="card-title">Spa Gift</h4>
+            <p>Lorem ipsum dolor sit amet.</p>
+            
+            <div class="card-price">
+                <div class="price">$7.5</div>
+                <i class="fa-solid fa-plus add-to-cart"></i>
+            </div>
+     </div>
+
+     <!-- cart sidebar section -->
+      <div class="sidebar" id="sidebar">
+        <div class="sidebar-close">
+            <i class="fa-solid fa-close"></i>
+        </div>
+        <div class="cart-menu">
+            <h3>My Cart</h3>
+            <div class="cart-tems">test 1</div>
+        </div>
+
+        <div class="sidebar-footer">
+            <div class="total-amount">
+                <h5>Total</h5>
+                <div class="cart-total">$0.00</div>
+            </div>
+            <button class="checkout-btn">Checkout</button>
+        </div>
+        </div>
+      </div>
+    </main>
+    <script src="App.js"></script>
+</body>
+</html>
