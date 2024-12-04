@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const addToCartButtons = document.querySelectorAll('.add-to-cart');
     const cartItemCount = document.querySelector('.cart-icon span');
-    const cartItemList = document.querySelector('.cart-tems');
+    const cartItemList = document.querySelector('.cart-items');
     const cartTotal = document.querySelector('.cart-total');
     const cartIcon = document.querySelector('.cart-icon');
     const sidebar = document.getElementById('sidebar');
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (existingItem) {
           existingItem.quantity++;
         } else {
-          cartItems.push(item);   
+          cartItems.push(item); 
   
         }
   

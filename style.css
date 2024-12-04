@@ -172,73 +172,74 @@ body {
     margin-bottom: 10px; 
 }
 
-/* card list */
-
+/* Card List Section */
 .card-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-    margin-bottom: 2rem;
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+    gap: 20px; 
+    margin: 1rem 0; 
 }
 
-.card{
-    width: 250px;
-    padding: 10px 1rem;
-    border-radius: 10px;
-    background-color: var(--decent-color);
+.card {
+    padding: 15px; 
+    border: 1px solid var(--decent-color); 
+    border-radius: 12px; 
+    background-color: var(--decent-color); 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
-    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    color: var(--text-color);
+    transition: transform 0.3s, box-shadow 0.3s; 
 }
 
-.card img{
-    width: 100%;
-    height: auto;
+.card:hover {
+    transform: scale(1.03); /* Subtle zoom on hover */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
 }
 
-.card-price{
-    display: flex;
-    align-items: center;
-    width: 100%;
-    justify-content: space-between;
+.card img {
+    width: 100%; /* Full width for responsiveness */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; 
+    margin-bottom: 15px; 
 }
 
-.card-price .price{
-    color: var(--primary-color);
+.card .card-title {
+    font-size: 1rem;
     font-weight: 600;
+    color: var(--text-color);
+    text-align: center;
+    margin-bottom: 10px; /* Space below title */
 }
 
-.add-to-cart{
-    padding: 5px;
+.card .card-description {
+    font-size: 0.9rem;
+    color: #666; 
+    text-align: center;
+    margin-bottom: 15px; /* Space below description */
+}
+
+.card .card-price {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 15px; /* Space below price */
+}
+
+.card .add-to-cart {
+    padding: 10px;
     background-color: var(--secondary-color);
     color: var(--accent-color);
-    border-radius: 50%;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.add-to-cart:hover{
-    color: var(--decent-color);
-    box-shadow: rgb(0 0 0  /30%) 0px 4px 4px, rgb(231, 236, 236) 
-    0px 0px 0px 3px;
-}
-
-.card a {
-    text-decoration: none; /* Remove underline on the link */
-}
-
-.card a img {
-    display: block;
-    max-width: 100%;
-    transition: transform 0.3s ease;
-}
-
-.card a img:hover {
-    transform: scale(1.05); /* Slight zoom effect on hover */
+.card .add-to-cart:hover {
+    background-color: #17b817; 
 }
 
 
@@ -270,14 +271,14 @@ body {
     cursor: pointer;
 }
 
-.cart-tems{
+.cart-items{
     display: flex;
     flex-direction: column;
     gap: 10px;
     margin-top: 1rem;
 }
 
-.cart-tems{
+.cart-items{
     display: flex;
     justify-content: space-between;
     padding: 10px 5px;
@@ -324,46 +325,35 @@ body {
     cursor: pointer;
 }
 
-
-/* Payment Page Styles */
-
-.payment-page {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #f9f9f9; 
-    padding: 0; 
-}
-
-.payment-page .container {
+/* Form Section */
+.form-container {
+    max-width: 400px;
+    margin: 70px auto; 
+    padding: 20px;
     background: #ffffff;
     border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 90%;
-    max-width: 400px;
+    box-shadow: -4px 0 6px rgba(0, 0, 0, 0.1), 4px 0 6px rgba(0, 0, 0, 0.1);
 }
 
-.payment-page h1 {
+.form-container h1 {
     text-align: center;
     margin-bottom: 20px;
     font-size: 1.8rem;
     color: #333333;
 }
 
-.payment-page form {
+.form-container form {
     display: flex;
     flex-direction: column;
 }
 
-.payment-page label {
+.form-container label {
     margin-bottom: 8px;
     font-size: 1rem;
     color: #555555;
 }
 
-.payment-page input[type="text"] {
+.form-container input[type="text"] {
     padding: 10px;
     border: 1px solid #cccccc;
     border-radius: 5px;
@@ -372,12 +362,12 @@ body {
     width: 100%;
 }
 
-.payment-page input[type="text"]:focus {
+.form-container input[type="text"]:focus {
     border-color: var(--secondary-color);
     outline: none;
 }
 
-.payment-page input[type="submit"] {
+.form-container input[type="submit"] {
     background-color: var(--secondary-color);
     color: var(--accent-color);
     font-size: 1rem;
@@ -388,7 +378,7 @@ body {
     transition: background-color 0.3s;
 }
 
-.payment-page input[type="submit"]:hover {
+.form-container input[type="submit"]:hover {
     background-color: #17b817;
 }
 
@@ -466,6 +456,28 @@ body {
     background-color: #17b817;
 }
 
+.final-text p{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background-color: var(--primary-color);
+    font-weight: 300;
+    margin-top: 70px;
+}
+
+.top{
+    position: fixed;
+    bottom: 2.1rem;
+    right: 2.1rem;
+}
+
+.top i{
+    color: #000;
+    background-color: var(--decent-color);
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 0.5rem;
+}
 
 
 /* Responsiveness */
